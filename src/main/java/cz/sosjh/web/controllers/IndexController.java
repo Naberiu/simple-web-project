@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class IndexController {
 
     @GetMapping(path = "/", produces = MediaType.TEXT_HTML_VALUE)
-    public ResponseEntity<String> index(@RequestParam(name = "myName", defaultValue = "World") String myName) {
-        return ResponseEntity.ok("<html><body><h1>Hello " + myName + "</h1></body></html>");
+    public String index(@RequestParam(name = "myName", defaultValue = "World") String myName) {
+        return "index";
     }
 }
 
